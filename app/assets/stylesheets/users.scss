@@ -1,3 +1,59 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.field {
+	color: lightblue;
+	text-align: center;
+}
+
+.log-in {
+	display: flex;
+	justify-content: center;
+}
+
+.log-in a {
+	color: lightblue;
+	margin: 15px;
+}
+
+.actions {
+	text-align: center;
+}
+
+.avatar {
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+}
+
+.avatar input {
+	width: 215px;
+}
+
+.user-img {
+	float: left;
+	margin: 0 15px 15px 15px;
+}
+
+.user-movies {
+	color: lightgray;
+}
+
+.sign-up-two {
+	text-align: center;
+	margin: 20px;
+
+}
+
+.sign-up-two a {
+	color: rgba(71, 252, 255, 1);
+}
+
+.sign-up-links{
+	display: block;
+	margin-top: 30px;
+}
+
+.liked-movies {
+	color: rgba(116, 0, 240, 1);
+}

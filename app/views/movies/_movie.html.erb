@@ -1,0 +1,15 @@
+
+
+<div class="card" style="max-width: 18em; margin-left: 15px; margin-bottom: 15px; background: rgba(100, 100, 100, 0.3);">
+  <%= image_tag movie.avatar.url(:medium), class: 'card-img-top' %>
+  <div class="card-block">
+    <h4 class="card-title"><%= link_to movie.name, movie %> </h4>
+  	<% if movie.ratings.average(:star).nil? %>
+  		Not yet rated
+  	<% else %>
+  		<%= movie.ratings.average(:star).round(+1) %>
+  	<% end %>
+    <p>by: <%= movie.user.first_name %> <%= movie.user.last_name %></p>
+    <p class="card-text"><small>Created on <%= movie.created_at.strftime("%Y-%m-%d") %></small></p>
+  </div>
+</div>

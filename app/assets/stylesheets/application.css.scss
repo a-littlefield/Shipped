@@ -21,5 +21,15 @@
 
 .sign-up {
 	border-right: 1px solid cyan;
-	padding-right: 5px;
+	padding-right: 8px;
+	margin-right: 5px;
+}
+
+.sign {
+	color: rgba(71, 252, 255, 1);
+}
+
+.sign:hover {
+	color: aquamarine;
+	text-decoration: none;
 }

@@ -1,2 +1,9 @@
-<h1>Movies#new</h1>
-<p>Find me in app/views/movies/new.html.erb</p>
+
+<%= render 'form' %>
+
+Your most recent movies
+<div class="card-deck movies">
+	<% @movies.order(created_at: :desc).limit(5).each do |movie| %>
+		<%= render movie %>
+	<% end %>
+</div>

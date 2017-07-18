@@ -1,0 +1,11 @@
+
+
+
+$('form').trigger("reset");
+
+$('p.errors').remove();
+<% if @rating.persisted? %>
+  $('.ratings').prepend("<%= j render @rating %>");
+<% else %>
+  $('.error').text('<%= j @rating.errors.full_messages.to_sentence.capitalize %>');
+<% end %>

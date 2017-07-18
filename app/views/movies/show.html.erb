@@ -1,2 +1,27 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+
+<h1 class="movie-title">
+	<%= @movie.name %>
+</h1>
+<h5 class="movie-genre" style="text-align: center;"><%= @movie.genre %></h5>
+<%= image_tag @movie.avatar.url, class: 'movie-show-img' %> <br>
+
+<div class="movie-page">
+	Made by: <br>
+	<%= image_tag @movie.user.avatar.url(:thumb) %> <br>
+	<%= @movie.user.first_name %> <%= @movie.user.last_name %>
+	 <br> <br>
+
+	you leik? 
+	<br>
+	<%= render 'viewings/form' %>
+	<br> <br>
+
+	<%= render 'ratings/form' %>
+</div>
+
+<h3 style="text-align: center; color: honeydew; clear: left;">Reviews</h3> <br>
+<div class="ratings">
+	<% @movie.ratings.order(created_at: :desc).each do |rating| %>
+		<%= render rating %>
+	<% end %>
+</div>

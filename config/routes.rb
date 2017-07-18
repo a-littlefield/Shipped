@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :movies
-  resources :ratins
+  resources :ratings
   resources :viewings
 
   get 'home/index'

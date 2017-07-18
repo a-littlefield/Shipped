@@ -1,2 +1,22 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+
+<%= image_tag @user.avatar.url(:medium), class: 'user-img' %>
+
+<h3 style="color: lightgray;">My works:</h3><hr>
+<% @user.movies.each do |movie| %>
+	<div style="display: inline-block; margin: 10px; color: lightgray;">
+		<%= image_tag movie.avatar.url(:thumb) %> <br>
+		<%= link_to movie.name, movie, class: 'user-movies' %> <br> <%= movie.genre %> <br> length: <%= movie.length %>
+	</div>
+<% end %> <hr>
+
+<div class="liked-movies" style="margin-left: 20px;">
+	<h3>Liked movies:</h3>
+	<% @user.viewings.each do |viewing| %>
+		<% if viewing.liked == true %>
+			<div style="margin-top: 15px;">
+				<%= viewing.movie.name %> <br>
+				by <%= viewing.movie.user.first_name %> <%= viewing.movie.user.last_name %> 
+			</div>
+		<% end %>
+	<% end %>	
+</div>

@@ -7,14 +7,14 @@
                          PATCH  /movies/:id(.:format)          movies#update
                          PUT    /movies/:id(.:format)          movies#update
                          DELETE /movies/:id(.:format)          movies#destroy
-                  ratins GET    /ratins(.:format)              ratins#index
-                         POST   /ratins(.:format)              ratins#create
-               new_ratin GET    /ratins/new(.:format)          ratins#new
-              edit_ratin GET    /ratins/:id/edit(.:format)     ratins#edit
-                   ratin GET    /ratins/:id(.:format)          ratins#show
-                         PATCH  /ratins/:id(.:format)          ratins#update
-                         PUT    /ratins/:id(.:format)          ratins#update
-                         DELETE /ratins/:id(.:format)          ratins#destroy
+                 ratings GET    /ratings(.:format)             ratings#index
+                         POST   /ratings(.:format)             ratings#create
+              new_rating GET    /ratings/new(.:format)         ratings#new
+             edit_rating GET    /ratings/:id/edit(.:format)    ratings#edit
+                  rating GET    /ratings/:id(.:format)         ratings#show
+                         PATCH  /ratings/:id(.:format)         ratings#update
+                         PUT    /ratings/:id(.:format)         ratings#update
+                         DELETE /ratings/:id(.:format)         ratings#destroy
                 viewings GET    /viewings(.:format)            viewings#index
                          POST   /viewings(.:format)            viewings#create
              new_viewing GET    /viewings/new(.:format)        viewings#new
