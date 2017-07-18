@@ -1,0 +1,10 @@
+
+$('form').trigger("reset");
+$('input[name="movie[name]"]').focus();
+
+$('p.errors').remove();
+<% if @movie.persisted? %>
+  $('.movies').prepend("<%= j render @movie %>");
+<% else %>
+  $('.error').text('<%= j @movie.errors.full_messages.to_sentence.capitalize %>');
+<% end %>

@@ -1,3 +1,89 @@
 // Place all the styles related to the movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.card-block {
+	color: honeydew;
+}
+
+.card-block a {
+	color: honeydew;
+}
+
+.card-title a {
+	color: #47fcff;
+}
+
+.card-title a:hover {
+	color: aquamarine;
+}
+
+.card-img-top {
+	max-height: 220px;
+}
+
+.add-movie {
+	text-align: center;
+	margin-bottom: 15px;
+	color: white;
+}
+
+.add-movie a {
+	color: skyblue;
+}
+
+.movie-form {
+	display: flex;
+	justify-content: space-around;
+	color: white;
+}
+
+.submit {
+	margin-top: 20px;
+}
+
+.location {
+	width: 240px;
+}
+
+.length {
+	width: 250px;
+}
+
+.avatar {
+	margin: 30px;
+    margin-right: 75px;
+}
+
+.submit {
+	margin: 30px;
+}
+
+.movie-title {
+	color: white;
+	margin: 0 20px 20px 20px;
+	text-align: center;
+}
+
+.error {
+	color: white;
+}
+
+.movie-genre {
+	color: white;
+}
+
+.movie-show-img {
+	float: left;
+	max-width: 600px;
+	max-height: 600px;
+	margin-left: 50px;
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+.movie-page {
+	text-align: right;
+	margin-right: 70px;
+	color: white;
+}

@@ -1,0 +1,7 @@
+<%= form_with model: @viewing, local: true do |f| %>
+	<%= f.hidden_field :watched_count, value: 1 %>
+	<%= f.hidden_field :movie_id, value: @movie.id %>
+	<%= f.label :liked %>
+	<%= f.check_box :liked %>	
+	<%= f.submit 'Save' %>
+<% end %>

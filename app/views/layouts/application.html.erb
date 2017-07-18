@@ -8,9 +8,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="background: linear-gradient(to bottom right, black, gray);">
 	<!-- Navbar -->
-	<nav class="navbar navbar-toggleable-xl navbar-inverse" style="background: linear-gradient(to right, #9E00E5, #00BFBB);">
+	<nav class="navbar sticky-top navbar-toggleable-xl navbar-inverse" style="background: linear-gradient(to top right, black, gray);">
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -22,33 +22,33 @@
 			<div class="collapse navbar-collapse" id="nav-content">  
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link" href="#">Somefing</a>
+						<%= link_to "Home", root_path, class: 'nav-link' %>
 					</li>
 					<li class="nav-item">
 						<% if user_signed_in? %>
 							<%= link_to "Profile", users_show_path, class: 'nav-link' %>
 						<% else %>
-							<%= link_to "Sign up", new_user_registration_path, class: 'nav-link' %>
+							<%= link_to "Profile", new_user_session_path, class: 'nav-link' %>
 						<% end %>
+					</li>
+					<li class="nav-item">
+						<%= link_to "Movies", movies_path, class: 'nav-link' %>
 					</li>
 				</ul>
 				<span class="navbar-text">
 					<% if user_signed_in? %>
-						<%= link_to "Log out", destroy_user_session_path, method: :delete %>
+						<%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'sign' %>
 					<% else %>
-						<%= link_to "Sign up", new_user_registration_path, class: 'sign-up' %>
-						<%= link_to "Log in", new_user_session_path %>
+						<%= link_to "Sign up", new_user_registration_path, class: 'sign-up sign' %>
+						<%= link_to "Sign in", new_user_session_path, class: 'sign' %>
 					<% end %>
 		    	</span>
 			</div>
 		</nav>
 	
-
-
-
 	
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  	<p class="notice" style="color: lightgrey; margin-right: 30px"><%= notice %></p>
+    <p class="alert" style="color: lightgrey; margin-right: 30px"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

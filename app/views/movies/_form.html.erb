@@ -1,0 +1,26 @@
+
+<p class="error"></p>
+<%= form_with model: @movie, html: { multipart: true }, class: 'movie-form' do |f| %>
+	<div class="name">
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	<div class="genre">
+		<%= f.label :genre %>
+		<%= f.text_field :genre %>
+	</div>
+	<div class="location">
+		<%= f.label "Location filmed" %>
+		<%= f.text_field :location %>
+	</div>
+	<div class="length">
+		<%= f.label "Length in seconds" %>
+		<%= f.number_field :length %>
+	</div>
+	<div class="avatar">
+		<%= f.file_field :avatar %>
+	</div>
+	<div class="submit">
+		<%= f.submit "Upload" %>
+	</div>
+<% end %>

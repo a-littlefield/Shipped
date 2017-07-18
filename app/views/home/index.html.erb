@@ -1,4 +1,10 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-
-Hello!
+<body class="home-body">
+	<h1 class="welcome">Welcome to kinda Neflix! (not really though)</h1>
+	<p style="color: white; text-align: center;">Review and like other creators works and add your own movies!</p>
+	<p style="color: white; text-align: center;">Here are some recently added movies!</p>
+	<div class="card-deck">
+		<% @movies.order(created_at: :desc).limit(15).each do |movie| %>
+			<%= render movie %>
+		<% end %>
+	</div>
+</body>
